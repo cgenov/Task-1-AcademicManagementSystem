@@ -57,7 +57,7 @@ select * from EnrollmentInfo;
 
 -- b) Write a query to retrieve a list of courses in which a specific student is enrolled. --
 
-select course_id from EnrollmentInfo where stu_id='1'and ENROLL_STATUS='Enrolled';
+select c.course_name, e.course_id from EnrollmentInfo e join coursesinfo c on c.course_id=e.course_id where stu_id='1'and ENROLL_STATUS='Enrolled';
 
 -- c) Write a query to retrieve course information, including course name, instructor information. --
 
