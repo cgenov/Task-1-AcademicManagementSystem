@@ -96,10 +96,10 @@ group by 1;
 
 with CTE as (
 select stu_id, count(course_id) as enrolled_courses from EnrollmentInfo
-where enroll_status='Enrolled'
+where enroll_status='Enrolled' 
 group by stu_id
 )
-select s.stu_name, CTE.enrolled_courses from StudentInfo s join CTE on s.stu_id=CTE.stu_id;
+select s.stu_name, CTE.enrolled_courses from StudentInfo s join CTE on s.stu_id=CTE.stu_id where CTE.enrolled_courses>1;
 
 
 -- e) Write a query to retrieve the courses that have the highest number of enrolled students (arranging from highest to lowest) --
