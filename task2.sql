@@ -47,9 +47,9 @@ WHERE Student_id=1;
 SELECT* FROM student_table;
 
 SELECT 
-Stu_name, 
-Date_of_birth,
-DATE_PART('year', AGE(CURRENT_DATE, Date_of_birth)) AS age
+	Stu_name, 
+	Date_of_birth,
+	DATE_PART('year', AGE(CURRENT_DATE, Date_of_birth)) AS age
 FROM student_table
 WHERE  Grade='B';
 
@@ -64,8 +64,8 @@ ALTER TABLE student_table
 RENAME TO student_info;
 
 SELECT 
-Stu_name, 
-GPA
+	Stu_name, 
+	GPA
 FROM student_info
 ORDER BY GPA DESC
 LIMIT 1;
